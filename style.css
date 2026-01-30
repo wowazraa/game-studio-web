@@ -1,0 +1,248 @@
+/* GENEL ÖZELLİKLER */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #233b61;
+    padding: 20px 50px;
+    display: flex; /* yan yana */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #f39c12;
+}
+
+/* HERO */
+.hero {
+    display: flex; /* yazı resim yan yana */
+    padding: 80px 50px;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    color: #233b61;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #e67e22; /* hover efekti */
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* SERVICES */
+.services {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #233b61;
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid; /* 3 sütun */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.service-box h3 {
+    color: #233b61;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #233b61;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.pricing-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pricing-btn:hover {
+    background-color: #e67e22;
+}
+
+/* TASK2 - PRICING */
+.main-container {
+    padding: 60px 50px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    color: #233b61;
+}
+
+.pricing-wrapper {
+    display: flex; /* kartlar yan yana */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* mobilde alta geçsin */
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #233b61;
+    margin-bottom: 20px;
+}
+
+.amount {
+    font-size: 48px;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.card ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card li.disabled {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.btn {
+    padding: 12px 40px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #229954; /* hover efekti */
+}
+
+.back-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.back-link a {
+    text-align: center;
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    background-color: #e67e22;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* RESPONSIVE - mobil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero {
+        flex-direction: column-reverse; /* resim üstte */
+    }
+    
+    .hero-text h1 {
+        font-size: 28px; /* mobilde küçült */
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr; /* tek sütun */
+    }
+}
+
+/* RESPONSIVE - tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+    }
+}
